@@ -1,0 +1,110 @@
+ <div class="container"> 
+        <header>
+            <div class="menu">
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <div class="logo">
+                    <!-- <a href="">
+                        <img src="/project/images/logo.png" alt="logo" width="222" height="52" >
+                    </a> -->
+                    <h1>
+                        <a href="/">senindepon.com</a>
+                    </h1>
+                </div>
+                <div class="contactLogin">
+                    <ul>
+                        {{#unless displayLink}}
+                        <li><a href="/users/uye-ol">Üye Ol</a></li>
+                        <li><a href="/users/giris">Giriş Yap</a></li>
+                        {{/unless}}
+                        {{#if displayLink}}
+                        <li><a href="/users/cikis">Çıkış Yap</a></li>
+                        {{/if}}
+                    </ul>
+                 
+                </div>
+            </div>
+            <div class="navbar">
+                <ul class="navlinks"> 
+                    <li class="child"> 
+                        <a href="/">
+                            <i class="fa fa-home nav-icon"></i>
+                            <span>Ana Sayfa</span> 
+                        </a>
+                    </li>
+                    <li class="child">
+                        <a href="#">
+                            <i class="fa fa-cubes nav-icon"></i>
+                            <span>Bireysel Depolama</span> 
+                        <i class="fa-solid fa-angle-down ok"></i>
+                    </a> 
+                    <ul id="grandchilds">
+                        <li class="grandchild"><a href="/standart-depo">Standart Depo</a></li>
+                        <li class="grandchild"><a href="/buyuk-depo">Büyük Depo </a></li>
+                        <li class="grandchild"><a href="/xl-depo">XL Depo</a></li>   
+                    </ul>
+                    </li>
+                    <li class="child"> 
+                        <a href="/kurumsal-depo">
+                            <i class="fa-solid fa-warehouse nav-icon"></i>
+                            <span>Kurumsal Depolama</span> 
+                        </a>
+                    </li> 
+                    <li class="child"> 
+                        <a href="#">
+                            <i class="fa-solid fa-user-group nav-icon"></i>
+                            <span>Hakkımızda</span> 
+                            <i class="fa-solid fa-angle-down ok"></i>
+                        </a>
+                    <ul id="grandchilds">
+                        <li class="grandchild"><a href="/biz-kimiz">Biz Kimiz?</a></li>
+                        <li class="grandchild"><a href="/sss">Sıkça Sorulan Sorular</a></li>  
+                    </ul>
+                    </li>
+                    <li class="child"> 
+                        <a href="/contactInfos/iletisim">
+                            <i class="fa-solid fa-envelope nav-icon"></i>
+                            <span>İletişim</span> 
+                        </a>
+                    </li>
+                    <li class="child"> 
+                        <a href="/admin">
+                            <i class="fa-solid fa-envelope nav-icon"></i>
+                            <span>Admin</span> 
+                        </a>
+                    </li>
+                    {{#unless displayLink}}
+                    <li class="child"> 
+                        <div class="registerLogin">
+                            <a href="/users/uye-ol">
+                            <i class="fa-solid fa-envelope nav-icon"></i>
+                            <span>Üye Ol</span> 
+                        </a>
+                        </div>  
+                    </li>
+                    
+                    <li class="child"> 
+                        <div class="registerLogin">
+                            <a href="/users/giris">
+                            <i class="fa-solid fa-envelope nav-icon"></i>
+                            <span>Giriş Yap</span> 
+                        </a>
+                        </div>  
+                    </li>
+                    {{/unless}}
+                    {{#if displayLink}}
+                    <li class="child">
+                        <div class="registerLogin">
+                            <a href="/users/cikis">
+                                <i class="fa-solid fa-envelope nav-icon"></i>
+                                <span>Çıkış Yap</span>
+                            </a>
+                        </div>
+                    </li>
+                    {{/if}}
+                </ul>
+            </div>
+        </header>

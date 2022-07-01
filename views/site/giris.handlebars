@@ -1,0 +1,31 @@
+ <main>
+            <div class="container-main">
+                <div class="row-contact">
+                    <div class="header">
+                        <h1>GİRİŞ</h1>
+                    </div>
+                    {{#if sessionFlash.message}}
+                            <div class="{{sessionFlash.type}}">
+                               <p>{{sessionFlash.message}}</p> 
+                            </div>
+                        {{/if}}
+                    <div class="form-container"style="display:flex;width:auto; justify-content: center;margin:0">
+                        <form action="/users/giris" method="POST">
+                        
+                            <div class="form-row">
+                                <div class="row">
+                                    <input class="form-control" type="email" id="email" name="email" placeholder="Email" required="required" data-validation-required-message="Lütfen mail adresinizi girin">  
+                                </div>
+                                <div class="row">
+                                    <input class="form-control" type="password" id="password" name="password" placeholder="Şifreniz" required="required" data-validation-required-message="Lütfen şifrenizi girin">  
+                                </div>
+                                <div class="row">
+                                      <button class="form-control" type="submit" id="sendLoginButton">Gönder</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>  
+                </div>
+               
+            </div>
+        </main>

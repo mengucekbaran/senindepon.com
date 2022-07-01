@@ -1,0 +1,32 @@
+#VSCODE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+
+# img
+*.jpg
+*.png
+*.svg
+#json
+*.json
+# rar
+*.rar
+#files
+node_modules/
+public/images/
+public/lib/
+
+
+
+
+

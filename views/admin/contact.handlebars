@@ -1,0 +1,51 @@
+<main>
+    <div class="container-main">
+        <div class="container">
+            <div class="header">
+                <h1>İLETİŞİM BİLGİLERİ</h1>
+            </div>
+            {{> admin-nav}}
+            
+                <div class="table-category">
+                <table class="table tableCategory">
+                    <thead>
+                        <tr>
+                            <th> ID</th>
+                            <th> AD</th>
+                            <th> SOYAD</th>
+                            <th> E POSTA</th>
+                            <th> TELEFON</th>
+                            <th> DEPO ÇEŞİDİ</th>
+                            <th> MESAJ</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each contacts}} 
+                        <tr>
+                            <td>{{_id}}</td>
+                            <td>{{firstname}}</td>
+                            <td>{{lastname}}</td>
+                            <td>{{email}}</td>
+                            <td>{{phone}}</td>
+                            <td>{{depoCesidi}}</td>
+                            <td>{{message}}</td>
+                            <td>
+                                <form action="/admin/contact/{{_id}}?_method=DELETE" method="post">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class=" btn btn-delete">DELETE</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                
+            </div>
+            </div>
+            
+
+        </div>
+
+    </div>
+</main>
